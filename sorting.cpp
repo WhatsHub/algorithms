@@ -1,50 +1,6 @@
 #include <iostream>
-
-// Bubblesortalgorithmus >>>>>>>> funktioniert noch nicht ganz <<<<<<<<<<<<<<<<<
-void bubblesort (int arr[], int length){
-
-	// Bubble Sort Starts Here
-  int temp;
-
-	for(int i=0; i<=4; i++){
-		for(int j=0; j<4; j++){
-
-			//Swapping element in if statement    
-			if(arr[j]>arr[j+1]){
-				temp=arr[j];
-				arr[j]=arr[j+1];
-				arr[j+1]=temp;        
-			}
-
-		}         
-	} 
-
-}
-
-
-// Insertionsortalgorithmus
-void insertionsort (int arr[], int length){
-
-	// Zähler j, Zwischenspeicher temp
-	int j, temp;
-
-	// für jedes Element des Arrays
-	for (int i = 0; i < length; i++){
-
-		// Zähler j wird auf den Index des nächsten Elements gesetzt
-		j = i;
-
-		// Solange j > 0 und das aktuelle Element ist größer als Vorgänger
-		while ( j > 0 && arr[j] < arr[j-1] ){
-
-			// Swappe aktuelles Element und seinen Vorgänger
-			temp = arr[j];
-			arr[j] = arr[j-1];
-			arr[j-1] = temp;
-			j--;
-		}
-	}	
-}
+#include "bubblesort.cpp"
+#include "insertionsort.cpp"
 
 int main(){
 	
