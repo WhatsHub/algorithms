@@ -2,13 +2,14 @@
 // Bubblesort algorithm
 void bubblesort (int arr[], int length){
 
-	// Bubble Sort Starts Here
   int temp;
 
 	for(int i=0; i<=length; i++){
+
+		// Compare every field with it's successor
 		for(int j=0; j<length; j++){
 
-			//Swapping element in if statement    
+			//Swap a number with it's successor if the number is greater
 			if(arr[j]>arr[j+1]){
 				temp=arr[j];
 				arr[j]=arr[j+1];
