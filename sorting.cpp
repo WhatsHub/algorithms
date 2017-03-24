@@ -17,7 +17,7 @@ int main(){
 	std::cout << std::endl;
 
 	// Anwendung von insertionsort auf das Array
-	insertionsort(arr, length);
+	bubblesort(arr, length);
 
 	// Ausgabe des resultierenden Arrays
 	for ( int i = 0; i < length; i++ ){
