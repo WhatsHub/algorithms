@@ -1,11 +1,13 @@
 #include <iostream>
 #include <stdlib.h>
 #include <time.h>
+#include <chrono>
 #include <string>
 #include "bubblesort.cpp"
 #include "insertionsort.cpp"
 
 using namespace std;
+using namespace std::chrono;
 
 void fillArrRand(int arr[], int length){
 	// initialize random seed
@@ -22,14 +24,13 @@ void printArray(string name,int arr[], int length){
 	for (int i = 1; i < length; i++){
 		cout << ", "<< arr[i];
 	}
-	cout << "]\n" << endl;
+	cout << "]" << endl;
 }
 
 int main(){
 	int arrlength = 10;
 	// Ein unsortiertes array	
 	int arr[arrlength];
-
 	// >-----------------------------------Bubblesort-----------------------------------<
 	cout << "Bubblesort: \n" << endl;
 	// Array mit zufälligen werten befüllen
@@ -39,13 +40,11 @@ int main(){
 	// Anwendung von insertionsort auf das Array
 	bubblesort(arr, arrlength);
 	printArray("sorted", arr, arrlength);
-
 	// >-----------------------------------Insertionsort-----------------------------------<
 	cout << "Insertionsort: \n" << endl;
 	fillArrRand(arr, arrlength);
 	printArray("original", arr, arrlength);	
 	insertionsort(arr, arrlength);
 	printArray("sorted", arr, arrlength);
-
 	return 0;
 }
