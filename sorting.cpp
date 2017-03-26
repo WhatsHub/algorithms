@@ -7,15 +7,12 @@
 
 using namespace std;
 
-void fillArryRand(int arr[], int length){
+void fillArrRand(int arr[], int length){
 	// initialize random seed
 	srand(time(NULL));
-	// initialize random variable
-	int randomNum = rand() % 100 + 1;
 	// fill array with random numbers between 1 and 100
 	for (int i = 0; i < length; i++){
-		arr[i] = rand() % 100 + 1;
-		cout << "arr[" << i << "] = " << arr[i] << endl;
+		arr[i] = rand() % length + 1;
 	}
 }
 
@@ -29,21 +26,26 @@ void printArray(string name,int arr[], int length){
 }
 
 int main(){
-	
+	int arrlength = 10;
 	// Ein unsortiertes array	
-	int arr[] = {8, 5, 3, 6, 9, 2, 1, 4, 7};
-	int length = sizeof(arr)/sizeof(arr[0]);
+	int arr[arrlength];
 
-	string arrname = "myarray";
-
-	fillArryRand(arr, length);
-
-	printArray("original", arr, length);	
-
+	// >-----------------------------------Bubblesort-----------------------------------<
+	cout << "Bubblesort: \n" << endl;
+	// Array mit zufälligen werten befüllen
+	fillArrRand(arr, arrlength);
+	// Array ausgeben
+	printArray("original", arr, arrlength);	
 	// Anwendung von insertionsort auf das Array
-	bubblesort(arr, length);
+	bubblesort(arr, arrlength);
+	printArray("sorted", arr, arrlength);
 
-	printArray("sorted", arr, length);
+	// >-----------------------------------Insertionsort-----------------------------------<
+	cout << "Insertionsort: \n" << endl;
+	fillArrRand(arr, arrlength);
+	printArray("original", arr, arrlength);	
+	insertionsort(arr, arrlength);
+	printArray("sorted", arr, arrlength);
 
 	return 0;
 }

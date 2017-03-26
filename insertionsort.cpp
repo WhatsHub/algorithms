@@ -1,5 +1,3 @@
-
-// Insertionsortalgorithmus
 void insertionsort (int arr[], int length){
 
 	// Zähler j, Zwischenspeicher temp

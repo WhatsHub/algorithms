@@ -1,5 +1,5 @@
 #include <iostream>
-// Bubblesort algorithm
+
 void bubblesort (int arr[], int length){
 
 	int temp;
