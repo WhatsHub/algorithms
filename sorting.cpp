@@ -32,7 +32,7 @@ int main(){
 	// Ein unsortiertes array	
 	int arr[arrlength];
 	// >-----------------------------------Bubblesort-----------------------------------<
-	cout << "Bubblesort: \n" << endl;
+	cout << "\nBubblesort: \n" << endl;
 	// Array mit zufälligen werten befüllen
 	fillArrRand(arr, arrlength);
 	// Array ausgeben
@@ -41,7 +41,7 @@ int main(){
 	bubblesort(arr, arrlength);
 	printArray("sorted", arr, arrlength);
 	// >-----------------------------------Insertionsort-----------------------------------<
-	cout << "Insertionsort: \n" << endl;
+	cout << "\nInsertionsort: \n" << endl;
 	fillArrRand(arr, arrlength);
 	printArray("original", arr, arrlength);	
 	insertionsort(arr, arrlength);
