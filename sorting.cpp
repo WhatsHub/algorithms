@@ -11,8 +11,6 @@ using namespace std;
 using namespace std::chrono;
 
 void fillArrRand(int arr[], int length){
-	// initialize random seed
-	srand(time(NULL));
 	// fill array with random numbers between 1 and 100
 	for (int i = 0; i < length; i++){
 		arr[i] = rand() % length + 1;
@@ -29,6 +27,10 @@ void printArray(string name,int arr[], int length){
 }
 
 int main(){
+
+	// initialize random seed
+	srand(time(NULL));
+
 	int arrlength = 10;
 	// Ein unsortiertes array	
 	int arr[arrlength];
