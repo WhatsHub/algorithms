@@ -40,7 +40,7 @@ int main(){
 	fillArrRand(arr, arrlength);
 	// Array ausgeben
 	printArray("original", arr, arrlength);	
-	// Anwendung von insertionsort auf das Array
+	// Anwendung von Bubblesort auf das Array
 	bubblesort(arr, arrlength);
 	printArray("sorted", arr, arrlength);
 	// >-----------------------------------Insertionsort-----------------------------------<
