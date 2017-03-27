@@ -5,6 +5,7 @@
 #include <string>
 #include "bubblesort.cpp"
 #include "insertionsort.cpp"
+#include "selectionsort.cpp"
 
 using namespace std;
 using namespace std::chrono;
@@ -45,6 +46,13 @@ int main(){
 	fillArrRand(arr, arrlength);
 	printArray("original", arr, arrlength);	
 	insertionsort(arr, arrlength);
+	printArray("sorted", arr, arrlength);
+
+	// >-----------------------------------Selectionsort-----------------------------------<
+	cout << "\nSelectionsort: \n" << endl;
+	fillArrRand(arr, arrlength);
+	printArray("original", arr, arrlength);	
+	selectionsort(arr, arrlength);
 	printArray("sorted", arr, arrlength);
 	return 0;
 }
