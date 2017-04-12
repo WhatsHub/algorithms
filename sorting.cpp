@@ -6,6 +6,7 @@
 #include "bubblesort.cpp"
 #include "insertionsort.cpp"
 #include "selectionsort.cpp"
+#include "quicksort.cpp"
 
 using namespace std;
 using namespace std::chrono;
@@ -19,7 +20,8 @@ void fillArrRand(int arr[], int length){
 
 void printArray(string name,int arr[], int length){
 	cout << name << " : [";
-	cout << arr[0];	
+	cout << arr[0];
+
 	for (int i = 1; i < length; i++){
 		cout << ", "<< arr[i];
 	}
@@ -55,6 +57,13 @@ int main(){
 	fillArrRand(arr, arrlength);
 	printArray("original", arr, arrlength);	
 	selectionsort(arr, arrlength);
+	printArray("sorted", arr, arrlength);
+	
+	// >-----------------------------------Quicksort-----------------------------------<
+	cout << "\nQuicksort: \n" << endl;
+	fillArrRand(arr, arrlength);
+	printArray("original", arr, arrlength);	
+	quicksort(arr, 0, arrlength-1);
 	printArray("sorted", arr, arrlength);
 	return 0;
 }
